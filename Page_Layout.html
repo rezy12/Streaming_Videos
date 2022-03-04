@@ -1,0 +1,275 @@
+<!--
+    Name:           Rezwan Ahmed
+    Date:           1/5/22
+    Description:    Website list same layout as Disney PLus but diffrent layout of gener
+                    with simple layout and input
+    Notes: working progress in the genera
+-->
+
+<!DOCTYPE html>
+
+<style>
+
+    .boxlayout{
+        align-items: flex-end; 
+    }
+
+    /*background color transformation */
+    body{
+        background-image: linear-gradient(135deg, white, rgb(201 197 201), rgb(142 105 157));
+    }
+
+    /*search bar layout */
+    form {
+        background-color: #fff;
+        width: 300px;
+        height: 44px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    form:focus{
+        color: green;
+    }
+
+    /*search button layout background......etc. */
+    .search_button{
+        width: 83px;
+        height: 45px;
+        border: 1px solid #a731c7;
+        background: #ce6cee;
+        text-align: center;
+        color: #fff;
+        border-radius: 13px 13px 13px 13px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    input {
+        all: unset;
+        font: 16px system-ui;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+        color: #0a1a1a;
+    }
+
+        /*scroll out of the page*/
+        /*https://medium.com/@RahulTMody/create-a-scrolling-image-slider-in-react-1e4eddcd407b */
+    .scrollbar{
+        color: black;
+        overflow: hidden;
+        width: 100%;
+        height: 318px;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+        background-color: yellow;
+    }
+
+    /*scrolbar with hidden scrols */
+    .movie_divs{
+        display: inline-block;
+        padding: 14px;
+        text-align: center;
+        text-decoration: none;
+        height: 265px;
+        width: -webkit-fill-available;
+        padding: 5px;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 18px;
+        margin-bottom: 32px;
+    }
+    
+    /*movie list though each img */
+    .movies{
+        display: inline-block;
+        width: 200px;
+        height: 230px;
+        line-height: 50px;
+        text-align: center;
+        background-color: green;
+        padding: 1%;
+        margin: 5px;
+        margin-block: 4px;
+        margin-inline-start: auto;
+        border-radius: 12px 12px 12px 12px;
+        
+    }
+
+    .movies:hover{
+        margin: 0 40px;
+        transform: scale(1.2);
+    }
+
+    .movie_divs + .movies{
+        margin-left: 5px;
+    }
+
+    /*img movie setup */
+    img{
+        width: 90%;
+        height: 100%;
+        border: 4px solid black;
+        border-radius: 12px 12px 12px 12px;
+    }
+
+
+</style>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+
+    <!-- insert the layout of the page in the row of the genrie-->
+</head>
+
+<body>
+
+    <form id="form" role="search" style="text-align: center; align-items: center;">
+        <input type="text" placeholder="What are you looking for" id="form" name="name" maxlength="30">
+        <button type="submit" class="search_button">Submit</button>
+    </form>
+    
+
+    <!--NOTE ALL THESE IMAGES ARE FROM GOOGLE/WIKIPEDIA IMAGES I DO NOT OWN ANY OF THE IMAGES LISTED ON THE HTML/CSS/JAVASCRIPT
+    
+        PAGE. THIS IS JUST A DEMONSTARTION OF A STREAMING PAGE THAT WAS CREATED FROM REZWAN AHMED. NO SELLING
+    
+        NO BROWSING, AND/OR WATCHING ANY OF THE FILMS LISTED IN BROWERS. TRAILERS AND/OR VIDEOS ARE OWNED AND LICENSE
+    
+        BY YOUTUBE AND/OR GOOGLE. THANK YOU!-->
+ 
+    <!--Movies listed with images uploaded-->
+    <h1>Movies</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://i.etsystatic.com/29957400/r/il/28ecb4/3283268021/il_1588xN.3283268021_9x3p.jpg"></div>
+            <div class="movies"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlPlHyrMChFGxbvA-paUHP_pj1mro2kIxnJA&usqp=CAU"></div>
+            <div class="movies"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gDXM-epqOJ7vaHJ_MyMIxhVyL_y1dJLvdCWEZBXj6Z6TuIiow0jqsW_KpckAGvNRQhc&usqp=CAU"></div>
+            <div class="movies"> <img src="https://www.indiewire.com/wp-content/uploads/2018/05/the-rugrats-movie.jpg?w=673"></div>
+            <div class="movies"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBPAnNtu_R5Wu4M-RsdMItBl3uZKWZRP8Zzg&usqp=CAU"></div>
+            <div class="movies"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRAroxrO9ZImsHdfDe2zgWF_hteu7qatQy3g&usqp=CAU"></div>
+        </div>
+    </div>
+
+    <!--TV shows listed with images uploaded-->
+    <h1>TV Shows</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT30_aJLVczyudq754y1XE3ixAvEPfVEHM_oA&usqp=CAU"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/yzmhfPB6aATbyl1UzmhiyzNkCNw=/206x305/v2/https://resizing.flixster.com/UQLD7YBC2b5APpWPZq0cUz-GliI=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvUlRUVjg3MDUxNi53ZWJw"></div>
+            <div class="movies"> <img src="https://www.coverwhiz.com/uploads/tv/family-guy-season-5.jpg"></div>
+            <div class="movies"> <img src="https://m.media-amazon.com/images/M/MV5BZTgzMWI3M2QtYjY5My00ZTE1LWEyZmQtODE2NmIwNWE4Yzc1XkEyXkFqcGdeQXVyNTA5MjU5Nzc@._V1_.jpg"></div>
+            <div class="movies"> <img src="https://img.wattpad.com/cover/232394503-512-k251083.jpg"></div>
+            <div class="movies"> <img src=""></div>
+        </div>
+    </div>
+
+    
+    <!--90's films and TV shows that are listed with images uploaded-->
+    <h1>90's</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://resizing.flixster.com/ADrrv2PYPGXCcB2htohCgiaUfUQ=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p20480_p_v8_am.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/TUDYfGOXtX9Nt56kuubmERvhkHo=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p14910_p_v8_ac.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/18qmepqqbDG7QTuEgFCdf2VcO5g=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p22005_p_v8_aa.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/NZKpdxbmiA9s_XAB0tsjyboy7II=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p18721_p_v8_aj.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/tGzAUiX--0fQQdPK7_KJM-dXrB8=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p17735_p_v8_aa.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/JceMQ4hyai3caZQ7C_rTocEZXT4=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p16626_p_v8_ap.jpg"></div>
+        </div>
+    </div>
+
+    
+    <!--Action films listed with images uploaded-->
+    <h1>Action</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://resizing.flixster.com/MOm2Xc41ri0Vo9Rhw7EGqmDPcUI=/fit-in/180x240/v2/https://flxt.tmsimg.com/NowShowing/26808/26808_aa.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/tbfFgge5ryyvQYa-iiSqKv5T9xE=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p177089_p_v8_at.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/cGYRW3uadFJux-du4er0DVPH4E0=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p159729_p_v8_ap.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/xjMbr0dWlwelSTOW0qM8iNnrOuU=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p163191_p_v8_al.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/I3eZxzMMfA3xtUGLnMmBA-pUWr8=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p28873_p_v8_aj.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/N-YiDHMT0-QgNh2NdUIXmUH04EM=/fit-in/180x240/v2/https://flxt.tmsimg.com/assets/p24674_p_v8_ae.jpg"></div>
+        </div>
+    </div>
+
+    
+    <!--Romance films listed with images uploaded-->
+    <h1>Romance</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://resizing.flixster.com/gLOWLmoVoRE4bU5N6kS858kE0WE=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p11478894_v_v8_ab.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/pJ4BUWO4iWj_GSYAt0IYB3mVoK0=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p21467030_b_v8_ab.jpg"></div>
+            <div class="movies"> <img src="https://resizing.flixster.com/LUNpDZciOxvrukARl49qtPMMoMw=/fit-in/80x126/v2/https://flxt.tmsimg.com/assets/p21402965_b_v13_ad.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/7/74/Isn%27t_It_Romantic_%282019_poster%29.png"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/True_romance.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/1/12/I%27m_Your_Man_poster.jpeg"></div>
+        </div>
+    </div>
+
+    
+    <!--Comedy films listed with images uploaded-->
+    <h1>Comedy</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/6/6a/Impractical_Jokers_The_Movie_poster.png"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/2/26/My_Spy_poster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/e/e4/The_King_of_Staten_Island.jpeg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/The_Wrong_Missy_poster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Coming_2_America_release_poster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/8/87/Sing_2_poster.jpg"></div>
+        </div>
+    </div>
+
+    
+    <!--Horror films listed with images uploaded-->
+    <h1>Horror</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/6/63/1408poster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/5/50/AnnabelleComesHomePoster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Babang_Luksa_%28film%29_poster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Bloody_Crayons_poster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/6/6f/Thedark.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Ghostwatch.jpg"></div>
+        </div>
+    </div>
+
+    
+    <!--Few films favorites with images uploaded-->
+    <h1>Favorites</h1>
+    <div class="scrollbar">
+        <div class="movie_divs">
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Eight_mile_ver2.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/d/d0/Lord_of_the_Rings_-_The_Two_Towers_%282002%29.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/7/71/Scarface_-_1983_film.jpg"></div>
+            <div class="movies"> <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Movie_poster_for_%22Scary_Movie%22.jpg"></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    $(document).ready(function(){
+        $('#box').scrollLeft($(this).height())
+    })
+
+</script>
+
+</html>
